@@ -1,0 +1,18 @@
+[org 0x7c00]
+
+mov bp, 0x7c00
+mov sp, bp
+
+;mov bx, TestString
+;call PrintString
+call ReadDisk
+jmp PROGRAM_SPACE
+
+%include 'print.asm'
+%include 'diskread.asm'
+
+TestString:
+  db 'HAI!',0
+
+times 510-($-$$) db 0
+dw 0xaa55
