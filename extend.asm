@@ -1,3 +1,4 @@
+[bits 16]
 jmp EPM
 
 %include 'print.asm'
