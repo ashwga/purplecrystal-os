@@ -11,8 +11,5 @@ jmp PROGRAM_SPACE
 %include 'print.asm'
 %include 'diskread.asm'
 
-TestString:
-  db 'HAI!',0
-
 times 510-($-$$) db 0
 dw 0xaa55
